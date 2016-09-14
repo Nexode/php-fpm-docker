@@ -15,6 +15,7 @@ RUN apt-get update && \
         php5.6-xml \
         php5.6-mongo \
         php5.6-xdebug \
+        php5.6-mbstring \
         php5.6-mcrypt \
         php5.6-curl && \
     useradd -ms /bin/bash php-fpm && \
