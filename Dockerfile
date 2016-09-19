@@ -5,7 +5,6 @@ MAINTAINER Karabutin Alex <karabutinalex@gmail.com>
 RUN apt-get update && \
     apt-get -y install \
         software-properties-common \
-        language-pack-en-base \
         wget && \
     LC_ALL=C.UTF-8 add-apt-repository -y ppa:ondrej/php && \
     apt-get update && \
@@ -29,7 +28,9 @@ RUN apt-get update && \
     echo newrelic-php5 newrelic-php5/application-name string "NR_APP_NAME" | debconf-set-selections && \
     echo newrelic-php5 newrelic-php5/license-key string "NR_LICENSE_KEY" | debconf-set-selections && \
     apt-get -y install \
-        newrelic-php5
+        newrelic-php5 && \
+    apt-get -y clean && \
+    rm -rf /var/lib/{apt,dpkg,cache,log}/
 
 COPY config/php-fpm.ini /etc/php/5.6/fpm/php.ini
 COPY config/php-fpm.conf /etc/php/5.6/fpm/php-fpm.conf
