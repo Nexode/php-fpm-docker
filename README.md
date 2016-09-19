@@ -17,4 +17,5 @@ Container exposes ```9000``` port and includes next extensions:
 ### Environment
 
 ```NR_APP_NAME``` - NewRelic application name
+
 ```NR_LICENSE_KEY``` - NewRelic license key
