@@ -11,6 +11,7 @@ Container exposes ```9000``` port and includes next extensions:
 * xdebug
 * mbstring
 * mcrypt
+* mysql
 * curl
 * newrelic
 
