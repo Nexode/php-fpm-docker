@@ -4,6 +4,7 @@ MAINTAINER Karabutin Alex <karabutinalex@gmail.com>
 
 RUN apt-get update && \
     apt-get -y install \
+        uchardet \
         software-properties-common \
         wget && \
     LC_ALL=C.UTF-8 add-apt-repository -y ppa:ondrej/php && \
